@@ -6,12 +6,9 @@ import Home from './assets/components/Home.vue';
 
 
 <template>
-
   <div>
     <Home />
   </div>
-
-
 </template>
 
 

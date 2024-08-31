@@ -1,7 +1,8 @@
 <template>
     <h1> Home Component </h1>
     <h1> Mobile: {{ mobile }}</h1>
-    <h1>  {{ getName() }}</h1>
+    <h1>  {{ getName("Peter") }}</h1>
+    <h1>  All Date: {{ getData().email }}</h1>
 </template>
 
 
@@ -11,15 +12,22 @@ export default {
         data(){
             return {
                 email:'aakash@gmail.com',
-                mobile: 12345,
-                getName: function()
-                {
-                    return "Madoona: True Blue"
+                mobile: 12345
                 }
-
+            },
+            methods: {
+                getName(name){
+                    return name;
+                
+            
+            },
+            getData(){
+                return {
+                    name: "Cole",
+                    email:this.email
                 }
             }
-        }
+            }}
     
 
 </script>

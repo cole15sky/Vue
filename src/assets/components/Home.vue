@@ -1,8 +1,7 @@
 <template>
-    <h1> Home Component </h1>
-    <h1> Mobile: {{ mobile }}</h1>
-    <h1>  {{ getName("Peter") }}</h1>
-    <h1>  All Date: {{ getData().email }}</h1>
+   <H1> Two way Binding:</H1>
+   <input type="text" v-model="count"/>
+   <h3> {{ count }}</h3>
 </template>
 
 
@@ -11,8 +10,7 @@ export default {
         name: "Home",
         data(){
             return {
-                email:'aakash@gmail.com',
-                mobile: 12345
+                count:0
                 }
             },
             methods: {

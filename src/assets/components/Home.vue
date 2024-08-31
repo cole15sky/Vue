@@ -1,10 +1,13 @@
 <template>
-   <H1> Two way Binding:</H1>
-   <input type="text" placeholder="Enter email" v-model="email" />
-   <br/>
-   <input type="password" placeholder="enter password" v-model="password"/>
-   <br>
-   <button v-on:click="getData()" type="button">Get Values</button>
+  <h1> Get checkbox & Radio Button Value</h1>
+  <h3> Technology</h3>
+  <label for="Javascript">Javascript</label>
+<input type="checkbox" value="Javascript" v-model="technology" id="Javascript">
+
+  <label for="Python">Python</label>
+<input type="checkbox" value="Python" v-model="technology" id="Python">
+<h4> Selected  Technology :{{technology}}</h4>
+
 
 </template>
 
@@ -14,19 +17,12 @@ export default {
         name: "Home",
         data(){
             return{
-                email:null,
-                password:null,
+                technology:[]
 
             }
         },
-        methods: {
-            getData(){
-                console.warn("values:",this.email,this.password)
-
-            }
-        }
-}
-    
+    }
+          
 
 </script>
 

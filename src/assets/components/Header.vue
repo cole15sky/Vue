@@ -11,8 +11,8 @@
 <label for="password">Password:</label> 
 <input type="password" placeholder="Enter the password" v-model="password">
       </div> <br>
-      <button v-on:click="getData()" type="button">SignUp</button> 
-      <h5> Already have account? <u>Login</u></h5>
+      <button v-on:click="getData()" type="button">LogIn</button> 
+      <h5> Don't have account? <u>SignUp</u></h5>
       
     </div>
    </div>

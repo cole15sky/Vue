@@ -30,19 +30,30 @@ export default{
     }
 
     },
-    methods:{
-        getData(){
-        console.log("Values:",{
+    methods: {
+        getData() {
+            // Simple validation checks
+            if (!this.email || !this.password) {
+                alert("Both fields are required!");
+                return;
+            }
+            
+            // Basic email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(this.email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
 
-            username:this.email,
-            password :this.password
-
-        })
+            console.log("Values:", {
+                username: this.email,
+                password: this.password
+            });
         }
-
     }
+};
 
-    }
+    
 
 
 </script>
@@ -81,18 +92,19 @@ u{
 
 input{
     margin-left: 15px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 label{
     margin-left: 25px;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 button{
     background-color: blue;
     color: white;
+    border-radius: 20%;
 }
 </style>
 

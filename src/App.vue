@@ -1,5 +1,7 @@
 <script setup>
-import Home from './assets/components/Home.vue';
+import Header from './assets/components/Header.vue';
+// import Home from './assets/components/Home.vue';
+
 </script>
 
 
@@ -7,7 +9,8 @@ import Home from './assets/components/Home.vue';
 
 <template>
   <div>
-    <Home />
+    <!-- <Home /> -->
+     <Header/>
   </div>
 </template>
 

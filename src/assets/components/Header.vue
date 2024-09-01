@@ -63,6 +63,7 @@ h1{
     height: 300px;
     width: 250px;
     border: 2px solid blue;
+    border-radius: 8%;
     margin: auto; 
     position: relative;
 }

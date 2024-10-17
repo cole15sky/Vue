@@ -1,8 +1,5 @@
 <script setup>
-import Header from './assets/components/Header.vue';
-import Practice from './assets/components/Practice.vue';
-// import Home from './assets/components/Home.vue';
-
+import Header from './components/Header.vue';
 </script>
 
 
@@ -10,9 +7,7 @@ import Practice from './assets/components/Practice.vue';
 
 <template>
   <div>
-    <!-- <Home /> -->
      <Header/>
-      <!-- <Practice/> -->
   </div>
 </template>
 

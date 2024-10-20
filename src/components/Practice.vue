@@ -1,53 +1,39 @@
-<template>
-    <div>
-      <p>Time left: {{ timeLeft }} seconds</p>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: "Practice",
-  
-    data() {
-      return {
-        timeLeft: 10,
-        timer: null
-      };
-    },
-  
-    // Lifecycle hook - 1
-    mounted() {
-      // Start the timer when the component is mounted
-      console.log("Component mounted: Starting countdown timer.");
-      this.startTimer();
-    },
-  
-    // Lifecycle hook - 2
-    beforeUnmount() {
-      // Clean up the timer before the component is removed from the DOM
-      console.log("Component about to be unmounted: Stopping timer.");
-      clearInterval(this.timer);
-    },
-  
-    methods: {
-      startTimer() {
-        this.timer = setInterval(() => {
-          if (this.timeLeft > 0) {
-            this.timeLeft--;
-          } else {
-            clearInterval(this.timer);
-            console.log("Countdown finished!");
-          }
-        }, 1000);
-      }
+<script>
+export default {
+  data() {
+    return {
+
+      books: [{
+        name: "From Death",
+        Author: "leo nardo ",
+        Price: "255$"
+      },
+      {
+        name: "From LIFE",
+        Author: "leo nardo de caprico ",
+        Price: "315$"
+      },
+      {
+        name: "From Heaven",
+        Author: "leo de vinci ",
+        Price: "185$"
+      },
+      ]
+
+
     }
-  };
-  </script>
-  
-  <style scoped>
-  p {
-    font-size: 20px;
-    color: #333;
   }
-  </style>
-  
+}
+</script>
+
+
+<template>
+
+  <div v-for="(book, index) in books">
+    <h2>book {{ index + 1  }}     </h2>
+    <h1> {{ book.name }}</h1>
+    <h2> {{ book.Author }}</h2>
+    <h1> {{ book.Price }}</h1>
+  </div>
+
+</template>
